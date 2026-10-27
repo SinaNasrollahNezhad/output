@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-27T20:13:07
+// Generated 2026-10-27T21:43:54
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10363,7 +10363,7 @@ function pano2vrSkin(player,base) {
 				me._button_gmail.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_gmail.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -150;
-					me._button_gmail.style.bottom='45px';
+					me._button_gmail.style.bottom='5px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
 				else {
@@ -10488,8 +10488,8 @@ function pano2vrSkin(player,base) {
 				me._button_phone.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_phone.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_phone.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -150;
-					me._button_phone.style.bottom='40px';
+					this.ggDx = -110;
+					me._button_phone.style.bottom='5px';
 					me._button_phone.ggUpdatePosition(true);
 				}
 				else {
@@ -10655,8 +10655,8 @@ function pano2vrSkin(player,base) {
 				me._button_web.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_web.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_web.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -150;
-					me._button_web.style.bottom='35px';
+					this.ggDx = -100;
+					me._button_web.style.bottom='5px';
 					me._button_web.ggUpdatePosition(true);
 				}
 				else {
@@ -10776,8 +10776,8 @@ function pano2vrSkin(player,base) {
 				me._button_instagram.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_instagram.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_instagram.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -150;
-					me._button_instagram.style.bottom='30px';
+					this.ggDx = -80;
+					me._button_instagram.style.bottom='5px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
 				else {
@@ -10934,7 +10934,7 @@ function pano2vrSkin(player,base) {
 				me._button_.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -150;
+					this.ggDx = -146;
 					me._button_.style.bottom='24px';
 					me._button_.ggUpdatePosition(true);
 				}
