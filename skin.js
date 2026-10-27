@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-27T21:43:54
+// Generated 2026-10-27T21:55:24
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10362,8 +10362,8 @@ function pano2vrSkin(player,base) {
 				me._button_gmail.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_gmail.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_gmail.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -150;
-					me._button_gmail.style.bottom='5px';
+					this.ggDx = -100;
+					me._button_gmail.style.bottom='-55px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
 				else {
@@ -10488,8 +10488,8 @@ function pano2vrSkin(player,base) {
 				me._button_phone.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_phone.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_phone.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -110;
-					me._button_phone.style.bottom='5px';
+					this.ggDx = -100;
+					me._button_phone.style.bottom='-50px';
 					me._button_phone.ggUpdatePosition(true);
 				}
 				else {
@@ -10656,7 +10656,7 @@ function pano2vrSkin(player,base) {
 				me._button_web.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_web.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
-					me._button_web.style.bottom='5px';
+					me._button_web.style.bottom='-30px';
 					me._button_web.ggUpdatePosition(true);
 				}
 				else {
@@ -10733,7 +10733,7 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="button_instagram";
-		el.ggDx=121;
+		el.ggDx=240;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_svg ";
@@ -10776,12 +10776,12 @@ function pano2vrSkin(player,base) {
 				me._button_instagram.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_instagram.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_instagram.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -80;
-					me._button_instagram.style.bottom='5px';
+					this.ggDx = -100;
+					me._button_instagram.style.bottom='-45px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
 				else {
-					me._button_instagram.ggDx=121;
+					me._button_instagram.ggDx=240;
 					me._button_instagram.style.bottom='-120px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
