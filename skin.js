@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-28T21:34:14
+// Generated 2026-10-28T22:05:21
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -11044,6 +11044,32 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
+		me._sound_on.logicBlock_position = function() {
+			var newLogicStatePosition;
+			if (
+				((player.getViewerSize().width < 7000))
+			)
+			{
+				newLogicStatePosition = 0;
+			}
+			else {
+				newLogicStatePosition = -1;
+			}
+			if (me._sound_on.ggCurrentLogicStatePosition != newLogicStatePosition) {
+				me._sound_on.ggCurrentLogicStatePosition = newLogicStatePosition;
+				me._sound_on.style[domTransition]='left 0s, bottom 0s';
+				if (me._sound_on.ggCurrentLogicStatePosition == 0) {
+					this.ggDx = 166;
+					me._sound_on.style.bottom='24px';
+					me._sound_on.ggUpdatePosition(true);
+				}
+				else {
+					me._sound_on.ggDx=550;
+					me._sound_on.style.bottom='-213px';
+					me._sound_on.ggUpdatePosition(true);
+				}
+			}
+		}
 		me._sound_on.onclick=function (e) {
 			if (
 				(
@@ -18303,6 +18329,7 @@ function pano2vrSkin(player,base) {
 	me._button_web.logicBlock_position();
 	me._button_instagram.logicBlock_position();
 	me._button_.logicBlock_position();
+	me._sound_on.logicBlock_position();
 	me._sound_of.logicBlock_position();
 	me._loading_multires.logicBlock_visible();
 	me._fullscreen.logicBlock_alpha();
@@ -18371,7 +18398,7 @@ function pano2vrSkin(player,base) {
 	me._tt_zoomin.logicBlock_position();
 	me._tt_projection.logicBlock_text();
 	me._enter_vr.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._contact_pop_up.logicBlock_position();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_of.logicBlock_position(); });
+	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._contact_pop_up.logicBlock_position();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_on.logicBlock_position();me._sound_of.logicBlock_position(); });
 	player.addListener('tilesready', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('tilesrequested', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
