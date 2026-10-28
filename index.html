@@ -1,85 +1,723 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<style type="text/css" title="Default">
-			/* fullscreen */
-			html {
-				height:100%;
-			}
-			body {
-				height:100%;
-				margin: 0px;
-				overflow:hidden; /* disable scrollbars */
-				-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
-			}
-			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
-			::-webkit-scrollbar {
-				background-color: rgba(0,0,0,0.5);
-				width: 0.75em;
-			}
-			::-webkit-scrollbar-thumb {
-    			background-color:  rgba(255,255,255,0.5);
-			}
-		</style>	
-	</head>
-	<body>
-<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
-		<script type="text/javascript" src="pano2vr_player.js">
-		</script>
-		<script type="text/javascript" src="skin.js">
-		</script>
-		<script src="webxr/three.min.js"></script>
-		<script src="webxr/webxr-polyfill.min.js"></script>
-		<div id="container" style="width:100%;height:100%;overflow:hidden;">
-		<br>Loading...<br><br>
-		</div>
-		<script type="text/javascript">
-	
-			// create the panorama player with the container
-			pano=new pano2vrPlayer("container");
-			// add the skin object
-			skin=new pano2vrSkin(pano);
-			// load the configuration
-		
-			window.addEventListener("load", function() {
-				pano.readConfigUrlAsync("pano.xml");
-			});
-			if (window.navigator.userAgent.match(/Safari/i)) {
-				// fix for white borders, rotation on iPhone
-				function iosHfix(e) {
-					window.scrollTo(0, 1);
-					var container=document.getElementById("container");
-					var oh=container.offsetHeight;
-					document.documentElement.style.setProperty('height', '100vh');
-					if (oh!=container.offsetHeight) {
-						container.style.setProperty('height',"100%");
-					} else {
-						container.style.setProperty('height',window.innerHeight+"px");
-					}
-					window.scrollTo(0, 0);
-					pano.setViewerSize(container.offsetWidth, container.offsetHeight);
-				};
-				setTimeout(iosHfix,0);	
-				setTimeout(iosHfix,100);	
-				window.addEventListener("resize", function() {
-					setTimeout(iosHfix,0);
-					// hide toolbar on iPad happens with a delay
-					setTimeout(iosHfix,500);
-					setTimeout(iosHfix,1000);
-					setTimeout(iosHfix,2000);
-				});
-			}
-		</script>
-		<noscript>
-			<p><b>Please enable Javascript!</b></p>
-		</noscript>
-<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - --> 
-	</body>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دامون سپهر پارس بنا | تور مجازی اختصاصی</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-dark: #070a0f;
+      --card-bg: rgba(14, 20, 30, 0.94);
+      --gold-primary: #c5a059;
+      --gold-light: #e4c176;
+      --text-white: #f5f2eb;
+      --text-muted: #9aa4b2;
+      --border-card: rgba(197, 160, 89, 0.35);
+      --border-btn: rgba(197, 160, 89, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      color: var(--text-white);
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 12px;
+    }
+
+    /* گرافیک شفاف شطرنجی/معماری در پس‌زمینه */
+    .bg-architectural {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(197, 160, 89, 0.12), transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(15, 34, 64, 0.45), transparent 45%),
+        radial-gradient(circle at 90% 90%, rgba(197, 160, 89, 0.08), transparent 45%);
+    }
+
+    .bg-architectural::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.10;
+      background-image: 
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0px, rgba(255, 255, 255, 0.06) 1px, transparent 1px, transparent 55px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0px, rgba(255, 255, 255, 0.06) 1px, transparent 1px, transparent 55px);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .main-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: 22px;
+      padding: 24px 20px 18px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.8),
+        0 0 45px rgba(197, 160, 89, 0.06);
+      text-align: center;
+    }
+
+    /* بخش لوگوی شرکت */
+    .brand-header {
+      margin-bottom: 14px;
+    }
+
+    .brand-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      max-width: 200px;
+    }
+
+    .brand-logo-wrap img {
+      width: 100%;
+      height: auto;
+      max-height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 12.5px;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .intro-text {
+      color: var(--text-muted);
+      font-size: 12.5px;
+      line-height: 1.85;
+      margin: 12px 0 18px;
+      padding: 0 4px;
+    }
+
+    /* دکمه‌های چهارگانه اصلی */
+    .buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 9px 16px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.22s ease;
+      font-family: inherit;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #c5a059 0%, #e8ca84 50%, #b89146 100%);
+      color: #0d1219;
+      border: none;
+      box-shadow: 0 8px 20px rgba(197, 160, 89, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 28px rgba(197, 160, 89, 0.44);
+    }
+
+    .btn-secondary {
+      background: rgba(23, 31, 45, 0.75);
+      border: 1px solid var(--border-btn);
+      color: var(--text-white);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(32, 43, 62, 0.95);
+      border-color: rgba(197, 160, 89, 0.55);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* بخش اطلاعات تماس */
+    .contact-container {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-card-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      text-decoration: none;
+      color: #cfd6e0;
+      font-size: 12.5px;
+      transition: all 0.2s ease;
+      direction: ltr;
+    }
+
+    .contact-card-item:hover {
+      background: rgba(197, 160, 89, 0.09);
+      border-color: rgba(197, 160, 89, 0.38);
+      color: var(--gold-light);
+    }
+
+    .contact-meta {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .contact-card-item svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+    }
+
+    .contact-tag {
+      font-size: 11px;
+      color: var(--text-muted);
+      direction: rtl;
+    }
+
+    .copyright {
+      margin-top: 14px;
+      font-size: 10.5px;
+      color: #6a7482;
+    }
+
+    /* ساختار کلی مودال‌ها */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: rgba(4, 7, 12, 0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      max-height: 85vh;
+      overflow-y: auto;
+      background: #111722;
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+      text-align: right;
+    }
+
+    /* شخصی‌سازی اندازه مودال کارشناس جهت خوانایی بهتر و بزرگ‌تر شدن محتوا */
+    .modal-card-expert {
+      max-width: 520px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 24px 22px 20px;
+      background: radial-gradient(circle at 50% 10%, rgba(197, 160, 89, 0.08) 0%, #111722 70%);
+    }
+
+    /* شخصی‌سازی مودال راهنما برای مدیریت اسکرول مستقل محتوای کامل */
+    .modal-card-guide {
+      max-width: 520px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0;
+      background: #111722;
+    }
+
+    .modal-header-guide {
+      padding: 20px 22px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+
+    .guide-scroll-container {
+      overflow-y: auto;
+      padding: 18px 22px;
+      flex: 1;
+      text-align: right;
+    }
+
+    /* اسکرول‌بار ظریف و شیک */
+    .expert-text-container::-webkit-scrollbar,
+    .guide-scroll-container::-webkit-scrollbar,
+    .modal-card::-webkit-scrollbar {
+      width: 5px;
+    }
+    .expert-text-container::-webkit-scrollbar-track,
+    .guide-scroll-container::-webkit-scrollbar-track,
+    .modal-card::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+    }
+    .expert-text-container::-webkit-scrollbar-thumb,
+    .guide-scroll-container::-webkit-scrollbar-thumb,
+    .modal-card::-webkit-scrollbar-thumb {
+      background: var(--gold-primary);
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 18px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      background: var(--gold-primary);
+      color: #070a0f;
+      border-color: var(--gold-primary);
+    }
+
+    .modal-title {
+      font-size: 17px;
+      color: var(--gold-light);
+      margin-bottom: 0;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .modal-body {
+      color: #bdc6d3;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* بخش پروفایل کارشناس (بزرگ‌تر، شاخص و هاله طلایی) */
+    .expert-profile-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(197, 160, 89, 0.32);
+      padding: 18px 16px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .expert-avatar {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold-primary);
+      background: #1b2333;
+      box-shadow: 0 0 22px rgba(197, 160, 89, 0.4);
+      flex-shrink: 0;
+    }
+
+    .expert-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .expert-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .expert-role {
+      font-size: 13px;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* کانتینر توضیحات با اسکرول مستقل و خوانایی حداکثری متن */
+    .expert-text-container {
+      overflow-y: auto;
+      padding-left: 8px;
+      padding-right: 4px;
+      flex: 1;
+      border-right: 3px solid var(--gold-primary);
+      background: rgba(0, 0, 0, 0.2);
+      padding-top: 8px;
+      border-radius: 8px 12px 12px 8px;
+    }
+
+    .expert-text-container p {
+      margin-bottom: 14px;
+      text-align: justify;
+      color: #f1f5f9;
+      font-size: 13.8px;
+      line-height: 2;
+      font-weight: 500;
+    }
+
+    .expert-text-container p:last-child {
+      margin-bottom: 0;
+    }
+
+    .guide-box {
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 12px 14px;
+      border-radius: 10px;
+      border-right: 3px solid var(--gold-primary);
+    }
+
+    .guide-box strong {
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-architectural"></div>
+
+  <main class="container">
+    <section class="main-card">
+      
+      <!-- لوگوی شرکت از پوشه اختصاصی UI_info -->
+      <header class="brand-header">
+        <div class="brand-logo-wrap">
+          <img src="UI_info/UI_image/Lego.png" alt="لوگوی شرکت دامون سپهر پارس بنا" />
+        </div>
+        <h1 class="brand-title">دامون سپهر پارس بنا</h1>
+        <p class="brand-subtitle">مرجع تخصصی املاک و سرمایه‌گذاری اطراف حرم مطهر</p>
+      </header>
+
+      <p class="intro-text">
+        به تور مجازی ۳۶۰ درجه این پروژه خوش آمدید. شما می‌توانید تمام فضاها و جزئیات پروژه را به صورت زنده و تعاملی بررسی فرمایید.
+      </p>
+
+      <!-- دکمه‌های اصلی -->
+      <div class="buttons-group">
+        <!-- ۱. ورود به تور مجازی -->
+        <a href="tour.html" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>ورود به تور مجازی ۳۶۰ درجه</span>
+        </a>
+
+        <!-- ۲. معرفی ملک از زبان کارشناس -->
+        <button type="button" class="btn btn-secondary" onclick="openModal('modal-expert')">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>معرفی ملک از زبان کارشناس</span>
+        </button>
+
+        <!-- ۳. راهنمای بازدید -->
+        <button type="button" class="btn btn-secondary" onclick="openModal('modal-guide')">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span>راهنمای بازدید از تور مجازی</span>
+        </button>
+
+        <!-- ۴. ارتباط و مشاوره -->
+        <button type="button" class="btn btn-secondary" onclick="openModal('modal-contact')">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>ارتباط و مشاوره با کارشناس</span>
+        </button>
+      </div>
+
+      <!-- اطلاعات تماس منظم و شکیل -->
+      <footer class="contact-container">
+        <!-- وب‌سایت -->
+        <a href="https://damoonestate.ir/" target="_blank" rel="noopener" class="contact-card-item">
+          <span class="contact-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>damoonestate.ir</span>
+          </span>
+          <span class="contact-tag">وب‌سایت رسمی</span>
+        </a>
+
+        <!-- اینستاگرام -->
+        <a href="https://www.instagram.com/damoon.company/" target="_blank" rel="noopener" class="contact-card-item">
+          <span class="contact-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@damoon.company</span>
+          </span>
+          <span class="contact-tag">اینستاگرام</span>
+        </a>
+
+        <!-- ایمیل -->
+        <a href="mailto:damoonestate@gmail.com" class="contact-card-item">
+          <span class="contact-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>damoonestate@gmail.com</span>
+          </span>
+          <span class="contact-tag">ایمیل شرکت</span>
+        </a>
+
+        <!-- تلفن همراه -->
+        <a href="tel:+989156868041" class="contact-card-item">
+          <span class="contact-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>0915 686 8041</span>
+          </span>
+          <span class="contact-tag">تماس مستقیم</span>
+        </a>
+
+        <p class="copyright">دامون سپهر پارس بنا | همراه شما در انتخابی مطمئن</p>
+      </footer>
+
+    </section>
+  </main>
+
+  <!-- مودال ۱: معرفی کارشناس با عکس بزرگ‌تر و اسکرول مستقل برای توضیحات -->
+  <div class="modal-overlay" id="modal-expert">
+    <div class="modal-card modal-card-expert">
+      <button class="modal-close" onclick="closeModal('modal-expert')">&times;</button>
+      <h3 class="modal-title" id="expert-modal-title">معرفی ملک از زبان کارشناس</h3>
+      
+      <!-- کادر مشخصات و تصویر کارشناس (بزرگ‌تر و وسط‌چین) -->
+      <div class="expert-profile-wrap">
+        <img id="expert-avatar-img" class="expert-avatar" src="UI_info/UI_image/expert.jpg" alt="عکس کارشناس" onerror="this.style.display='none'" />
+        <div class="expert-meta">
+          <span class="expert-name" id="expert-name-text">مهندس کارشناس</span>
+          <span class="expert-role" id="expert-role-text">مشاور ارشد فروش</span>
+        </div>
+      </div>
+
+      <!-- متن‌های کارشناس با اسکرول مستقل برای متون طولانی -->
+      <div class="modal-body expert-text-container" id="expert-paragraphs">
+        <p>در حال بارگذاری اطلاعات...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال ۲: راهنما با محتوای کامل نوار ابزار، آیکون‌ها و اسکرول مستقل -->
+  <div class="modal-overlay" id="modal-guide">
+    <div class="modal-card modal-card-guide">
+      <div class="modal-header-guide">
+        <button class="modal-close" onclick="closeModal('modal-guide')">&times;</button>
+        <h3 class="modal-title">راهنمای بازدید از تور مجازی</h3>
+      </div>
+      <div class="guide-scroll-container">
+        <div class="modal-body">
+          <div class="guide-box">
+            <strong>نحوه چرخش و حرکت (۳۶۰ درجه):</strong>
+            با کلیک و کشیدن ماوس (در کامپیوتر) یا لمس و کشیدن انگشت (در موبایل) در هر زاویه‌ای حرکت کنید و نمای کامل محیط را زیر نظر بگیرید.
+          </div>
+
+          <div class="guide-box">
+            <strong>جابجایی بین فضاها:</strong>
+            با لمس فلش‌ها یا نقاط راهنمای روی زمین، به راحتی به اتاق‌ها، راهروها، پارکینگ و طبقات دیگر پروژه منتقل شوید.
+          </div>
+
+          <div class="guide-box">
+            <strong>بزرگ‌نمایی و جزئیات (Zoom):</strong>
+            با دو انگشت (در موبایل) یا اسکرول ماوس (در رایانه) می‌توانید روی جزئیات معماری، متریال‌ها و نماها زوم کرده و با وضوح بالا بررسی کنید.
+          </div>
+
+          <div class="guide-box">
+            <strong>آیکون‌های نوار ابزار پایین صفحه (Toolbar):</strong>
+            <ul style="margin-right: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+              <li><strong>اطلاعات ملک:</strong> مشاهده مشخصات فنی، متراژ و جزئیات مهندسی پروژه.</li>
+              <li><strong>راهنمای صوتی / کارشناس:</strong> شنیدن توضیحات تخصصی و صوتی پروژه.</li>
+              <li><strong>پلان و نقشه هوایی:</strong> دسترسی سریع به نقشه طبقات و موقعیت‌یابی در بنا.</li>
+              <li><strong>گالری تصاویر:</strong> مشاهده رندرهای سه‌بعدی و عکس‌های اجرایی پروژه.</li>
+              <li><strong>واقعیت افزوده (AR):</strong> نمایش مدل سه‌بعدی پروژه در محیط واقعی شما.</li>
+              <li><strong>اشتراک‌گذاری:</strong> ارسال لینک تور مجازی برای سایر سرمایه‌گذاران.</li>
+              <li><strong>تماس سریع:</strong> ارتباط مستقیم با دفتر فروش و مشاوران مجموعه.</li>
+              <li><strong>تغییر زبان:</strong> جابجایی بین زبان‌های رابط کاربری (فارسی و انگلیسی).</li>
+              <li><strong>تمام‌صفحه (Full Screen):</strong> ورود به حالت تمام‌صفحه برای تجربه غوطه‌وری کامل.</li>
+              <li><strong>راهنما:</strong> مرور همین دستورالعمل‌ها و نحوه کار با محیط تور.</li>
+            </ul>
+          </div>
+
+          <div class="guide-box">
+            <strong>زیرمنوها و اقدامات سریع:</strong>
+            با کلیک روی منوهای فرعی هر بخش، می‌توانید به فایل‌های پیوست، مشخصات متریال مصرفی و شرایط پرداخت اقساطی دسترسی پیدا کنید.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال ۳: تماس -->
+  <div class="modal-overlay" id="modal-contact">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modal-contact')">&times;</button>
+      <h3 class="modal-title">ارتباط با کارشناس مجموعه</h3>
+      <div class="modal-body">
+        <p>جهت دریافت قیمت روز، استعلام شرایط پرداخت و هماهنگی بازدید حضوری:</p>
+        <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px;">
+          <a href="tel:+989156868041" class="btn btn-primary" style="min-height: 46px; font-size: 13px;">تماس مستقیم: 09156868041</a>
+          <a href="https://www.instagram.com/damoon.company/" target="_blank" rel="noopener" class="btn btn-secondary" style="min-height: 46px; font-size: 13px;">صفحه رسمی اینستاگرام</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- بارگذاری فایل محتوا -->
+  <script src="UI_info/UI_text/content.js"></script>
+
+  <script>
+    // توابع کنترل باز و بسته شدن مودال‌ها
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    // خواندن خودکار داده‌ها از content.js و نمایش در مودال کارشناس
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.UI_CONTENT && window.UI_CONTENT.expert) {
+        const exp = window.UI_CONTENT.expert;
+        
+        if (exp.modalTitle) {
+          document.getElementById('expert-modal-title').textContent = exp.modalTitle;
+        }
+        if (exp.name) {
+          document.getElementById('expert-name-text').textContent = exp.name;
+        }
+        if (exp.role) {
+          document.getElementById('expert-role-text').textContent = exp.role;
+        }
+        if (exp.photo) {
+          const img = document.getElementById('expert-avatar-img');
+          img.src = exp.photo;
+          img.style.display = 'block';
+        }
+
+        if (Array.isArray(exp.paragraphs) && exp.paragraphs.length > 0) {
+          const container = document.getElementById('expert-paragraphs');
+          container.innerHTML = '';
+          exp.paragraphs.forEach(text => {
+            const p = document.createElement('p');
+            p.textContent = text;
+            container.appendChild(p);
+          });
+        }
+      }
+    });
+  </script>
+</body>
 </html>
