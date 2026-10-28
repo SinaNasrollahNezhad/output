@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-28T22:05:21
+// Generated 2026-10-29T00:56:46
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10368,7 +10368,7 @@ function pano2vrSkin(player,base) {
 				me._button_gmail.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_gmail.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
-					me._button_gmail.style.bottom='-55px';
+					me._button_gmail.style.bottom='-155px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
 				else {
@@ -10494,7 +10494,7 @@ function pano2vrSkin(player,base) {
 				me._button_phone.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_phone.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
-					me._button_phone.style.bottom='-50px';
+					me._button_phone.style.bottom='-150px';
 					me._button_phone.ggUpdatePosition(true);
 				}
 				else {
@@ -10661,7 +10661,7 @@ function pano2vrSkin(player,base) {
 				me._button_web.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_web.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
-					me._button_web.style.bottom='-30px';
+					me._button_web.style.bottom='-80px';
 					me._button_web.ggUpdatePosition(true);
 				}
 				else {
@@ -10782,7 +10782,7 @@ function pano2vrSkin(player,base) {
 				me._button_instagram.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_instagram.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
-					me._button_instagram.style.bottom='-45px';
+					me._button_instagram.style.bottom='-60px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
 				else {
@@ -11059,8 +11059,8 @@ function pano2vrSkin(player,base) {
 				me._sound_on.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_on.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_on.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 166;
-					me._sound_on.style.bottom='24px';
+					this.ggDx = 100;
+					me._sound_on.style.bottom='0px';
 					me._sound_on.ggUpdatePosition(true);
 				}
 				else {
@@ -11216,8 +11216,8 @@ function pano2vrSkin(player,base) {
 				me._sound_of.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_of.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_of.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 166;
-					me._sound_of.style.bottom='24px';
+					this.ggDx = 100;
+					me._sound_of.style.bottom='0px';
 					me._sound_of.ggUpdatePosition(true);
 				}
 				else {
