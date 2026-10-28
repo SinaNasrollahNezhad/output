@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-29T01:45:52
+// Generated 2026-10-29T01:55:33
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10367,7 +10367,7 @@ function pano2vrSkin(player,base) {
 				me._button_gmail.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_gmail.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_gmail.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -250;
+					this.ggDx = -300;
 					me._button_gmail.style.bottom='-255px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
@@ -10493,7 +10493,7 @@ function pano2vrSkin(player,base) {
 				me._button_phone.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_phone.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_phone.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -250;
+					this.ggDx = -300;
 					me._button_phone.style.bottom='-250px';
 					me._button_phone.ggUpdatePosition(true);
 				}
@@ -11059,8 +11059,8 @@ function pano2vrSkin(player,base) {
 				me._sound_on.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_on.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_on.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 250;
-					me._sound_on.style.bottom='-150px';
+					this.ggDx = 235;
+					me._sound_on.style.bottom='-350px';
 					me._sound_on.ggUpdatePosition(true);
 				}
 				else {
@@ -11216,8 +11216,8 @@ function pano2vrSkin(player,base) {
 				me._sound_of.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_of.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_of.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 250;
-					me._sound_of.style.bottom='-150px';
+					this.ggDx = 235;
+					me._sound_of.style.bottom='-350px';
 					me._sound_of.ggUpdatePosition(true);
 				}
 				else {
