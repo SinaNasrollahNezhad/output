@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-30T19:29:27
+// Generated 2026-10-30T20:00:15
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -525,7 +525,7 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : pointer;';
 		hs+='height : 100%;';
-		hs+='left : 0%;';
+		hs+='left : 0.2%;';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
 		hs+='top : -0.29%;';
@@ -10196,121 +10196,6 @@ function pano2vrSkin(player,base) {
 		me._close.ggUpdatePosition=function (useTransition) {
 		}
 		me.divSkin.appendChild(me._close);
-		el=me._contact_pop_up=document.createElement('div');
-		el.ggId="contact_pop_up";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='left : 203px;';
-		hs+='opacity : 0;';
-		hs+='position : absolute;';
-		hs+='top : 298px;';
-		hs+='visibility : hidden;';
-		hs+='width : 100px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._contact_pop_up.ggIsActive=function() {
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			return player.getCurrentNode();
-		}
-		me._contact_pop_up.logicBlock_position = function() {
-			var newLogicStatePosition;
-			if (
-				((player.getViewerSize().width < 700))
-			)
-			{
-				newLogicStatePosition = 0;
-			}
-			else {
-				newLogicStatePosition = -1;
-			}
-			if (me._contact_pop_up.ggCurrentLogicStatePosition != newLogicStatePosition) {
-				me._contact_pop_up.ggCurrentLogicStatePosition = newLogicStatePosition;
-				me._contact_pop_up.style[domTransition]='left 0s, top 0s, opacity 300ms ease 0ms';
-				if (me._contact_pop_up.ggCurrentLogicStatePosition == 0) {
-					me._contact_pop_up.style.left='206px';
-					me._contact_pop_up.style.top='260px';
-				}
-				else {
-					me._contact_pop_up.style.left='203px';
-					me._contact_pop_up.style.top='298px';
-				}
-			}
-		}
-		me._contact_pop_up.logicBlock_alpha = function() {
-			var newLogicStateAlpha;
-			if (
-				((player.getVariableValue('show_cotact') == true))
-			)
-			{
-				newLogicStateAlpha = 0;
-			}
-			else {
-				newLogicStateAlpha = -1;
-			}
-			if (me._contact_pop_up.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
-				me._contact_pop_up.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._contact_pop_up.style[domTransition]='left 0s, top 0s, opacity 300ms ease 0ms';
-				if (me._contact_pop_up.ggCurrentLogicStateAlpha == 0) {
-					me._contact_pop_up.style.visibility=me._contact_pop_up.ggVisible?'inherit':'hidden';
-					me._contact_pop_up.style.opacity=1;
-				}
-				else {
-					setTimeout(function() { if (me._contact_pop_up.style.opacity == 0.0) { me._contact_pop_up.style.visibility="hidden"; } }, 305);
-					me._contact_pop_up.style.opacity=0;
-				}
-			}
-		}
-		me._contact_pop_up.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._buttons_contact=document.createElement('div');
-		el.ggId="buttons_contact";
-		el.ggDx=138;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='bottom : -3px;';
-		hs+='height : 32px;';
-		hs+='left : -10000px;';
-		hs+='position : absolute;';
-		hs+='visibility : inherit;';
-		hs+='width : 64px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._buttons_contact.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._buttons_contact.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth;
-					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
-			}
-		}
 		el=me._button_gmail=document.createElement('div');
 		els=me._button_gmail__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
@@ -10330,32 +10215,26 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="button_gmail";
-		el.ggDx=30;
+		el.ggDx=-109;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
 		hs ='';
-		hs+='bottom : -120px;';
+		hs+='bottom : 96px;';
 		hs+='cursor : pointer;';
 		hs+='height : 32px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 32px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		me._button_gmail.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
 			return false;
 		}
 		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
 			return player.getCurrentNode();
 		}
 		me._button_gmail.logicBlock_position = function() {
@@ -10373,13 +10252,13 @@ function pano2vrSkin(player,base) {
 				me._button_gmail.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_gmail.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_gmail.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -350;
-					me._button_gmail.style.bottom='-255px';
+					this.ggDx = -146;
+					me._button_gmail.style.bottom='96px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
 				else {
-					me._button_gmail.ggDx=30;
-					me._button_gmail.style.bottom='-120px';
+					me._button_gmail.ggDx=-109;
+					me._button_gmail.style.bottom='96px';
 					me._button_gmail.ggUpdatePosition(true);
 				}
 			}
@@ -10408,7 +10287,7 @@ function pano2vrSkin(player,base) {
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 			}
 		}
-		me._buttons_contact.appendChild(me._button_gmail);
+		me.divSkin.appendChild(me._button_gmail);
 		el=me._button_phone=document.createElement('div');
 		els=me._button_phone__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
@@ -10456,32 +10335,26 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="button_phone";
-		el.ggDx=105;
+		el.ggDx=-109;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
 		hs ='';
-		hs+='bottom : -120px;';
+		hs+='bottom : 60px;';
 		hs+='cursor : pointer;';
 		hs+='height : 32px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 32px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		me._button_phone.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
 			return false;
 		}
 		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
 			return player.getCurrentNode();
 		}
 		me._button_phone.logicBlock_position = function() {
@@ -10499,13 +10372,13 @@ function pano2vrSkin(player,base) {
 				me._button_phone.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_phone.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_phone.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -350;
-					me._button_phone.style.bottom='-300px';
+					this.ggDx = -146;
+					me._button_phone.style.bottom='60px';
 					me._button_phone.ggUpdatePosition(true);
 				}
 				else {
-					me._button_phone.ggDx=105;
-					me._button_phone.style.bottom='-120px';
+					me._button_phone.ggDx=-109;
+					me._button_phone.style.bottom='60px';
 					me._button_phone.ggUpdatePosition(true);
 				}
 			}
@@ -10534,50 +10407,7 @@ function pano2vrSkin(player,base) {
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 			}
 		}
-		me._buttons_contact.appendChild(me._button_phone);
-		me._contact_pop_up.appendChild(me._buttons_contact);
-		el=me._buttons_social=document.createElement('div');
-		el.ggId="buttons_social";
-		el.ggDx=-112;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='bottom : -3px;';
-		hs+='height : 32px;';
-		hs+='left : -10000px;';
-		hs+='position : absolute;';
-		hs+='visibility : inherit;';
-		hs+='width : 64px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		me._buttons_social.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._buttons_social.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth;
-					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
-			}
-		}
+		me.divSkin.appendChild(me._button_phone);
 		el=me._button_web=document.createElement('div');
 		els=me._button_web__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
@@ -10623,32 +10453,26 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="button_web";
-		el.ggDx=320;
+		el.ggDx=-109;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
 		hs ='';
-		hs+='bottom : -120px;';
+		hs+='bottom : 132px;';
 		hs+='cursor : pointer;';
 		hs+='height : 32px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 32px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		me._button_web.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
 			return false;
 		}
 		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
 			return player.getCurrentNode();
 		}
 		me._button_web.logicBlock_position = function() {
@@ -10666,13 +10490,13 @@ function pano2vrSkin(player,base) {
 				me._button_web.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_web.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_web.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -99;
-					me._button_web.style.bottom='-175px';
+					this.ggDx = -146;
+					me._button_web.style.bottom='132px';
 					me._button_web.ggUpdatePosition(true);
 				}
 				else {
-					me._button_web.ggDx=320;
-					me._button_web.style.bottom='-120px';
+					me._button_web.ggDx=-109;
+					me._button_web.style.bottom='132px';
 					me._button_web.ggUpdatePosition(true);
 				}
 			}
@@ -10701,7 +10525,7 @@ function pano2vrSkin(player,base) {
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 			}
 		}
-		me._buttons_social.appendChild(me._button_web);
+		me.divSkin.appendChild(me._button_web);
 		el=me._button_instagram=document.createElement('div');
 		els=me._button_instagram__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
@@ -10744,32 +10568,26 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="button_instagram";
-		el.ggDx=240;
+		el.ggDx=-109;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
 		hs ='';
-		hs+='bottom : -120px;';
+		hs+='bottom : 168px;';
 		hs+='cursor : pointer;';
 		hs+='height : 32px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 32px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
 		me._button_instagram.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
 			return false;
 		}
 		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
 			return player.getCurrentNode();
 		}
 		me._button_instagram.logicBlock_position = function() {
@@ -10787,13 +10605,13 @@ function pano2vrSkin(player,base) {
 				me._button_instagram.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._button_instagram.style[domTransition]='left 0s, bottom 0s';
 				if (me._button_instagram.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = -99;
-					me._button_instagram.style.bottom='-214px';
+					this.ggDx = -146;
+					me._button_instagram.style.bottom='168px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
 				else {
-					me._button_instagram.ggDx=240;
-					me._button_instagram.style.bottom='-120px';
+					me._button_instagram.ggDx=-109;
+					me._button_instagram.style.bottom='168px';
 					me._button_instagram.ggUpdatePosition(true);
 				}
 			}
@@ -10804,18 +10622,10 @@ function pano2vrSkin(player,base) {
 		me._button_instagram.onmouseover=function (e) {
 			me._button_instagram__img.style.visibility='hidden';
 			me._button_instagram__imgo.style.visibility='inherit';
-			me.elementMouseOver['button_instagram']=true;
 		}
 		me._button_instagram.onmouseout=function (e) {
-			me._text_.style[domTransition]='none';
-			me._text_.style.visibility='hidden';
-			me._text_.ggVisible=false;
 			me._button_instagram__img.style.visibility='inherit';
 			me._button_instagram__imgo.style.visibility='hidden';
-			me.elementMouseOver['button_instagram']=false;
-		}
-		me._button_instagram.ontouchend=function (e) {
-			me.elementMouseOver['button_instagram']=false;
 		}
 		me._button_instagram.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
@@ -10830,71 +10640,7 @@ function pano2vrSkin(player,base) {
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 			}
 		}
-		el=me._text_=document.createElement('div');
-		els=me._text___text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="Text \u06f1";
-		el.ggDx=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=false;
-		el.className="ggskin ggskin_text ";
-		el.ggType='text';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='left : -10000px;';
-		hs+='position : absolute;';
-		hs+='top : 35px;';
-		hs+='visibility : hidden;';
-		hs+='width : 85px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		hs ='position:absolute;';
-		hs += 'box-sizing: border-box;';
-		hs+='cursor: default;';
-		hs+='left: 0px;';
-		hs+='top:  0px;';
-		hs+='width: 87px;';
-		hs+='height: 22px;';
-		hs+='border: 1px solid #000000;';
-		hs+='color: rgba(255,255,255,1);';
-		hs+='text-align: center;';
-		hs+='white-space: nowrap;';
-		hs+='padding: 0px 1px 0px 1px;';
-		hs+='overflow: hidden;';
-		els.setAttribute('style',hs);
-		els.innerHTML="instagram";
-		el.appendChild(els);
-		me._text_.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._text_.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth + 2;
-					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
-			}
-		}
-		me._button_instagram.appendChild(me._text_);
-		me._buttons_social.appendChild(me._button_instagram);
-		me._contact_pop_up.appendChild(me._buttons_social);
-		me.divSkin.appendChild(me._contact_pop_up);
+		me.divSkin.appendChild(me._button_instagram);
 		el=me._button_=document.createElement('div');
 		els=me._button___img=document.createElement('img');
 		els.className='ggskin ggskin_button_';
@@ -10958,6 +10704,22 @@ function pano2vrSkin(player,base) {
 		}
 		me._button_.onclick=function (e) {
 			player.setVariableValue('show_cotact', !player.getVariableValue('show_cotact'));
+			me._button_instagram.ggVisible = !me._button_instagram.ggVisible;
+			var flag=me._button_instagram.ggVisible;
+			me._button_instagram.style[domTransition]='none';
+			me._button_instagram.style.visibility=((flag)&&(Number(me._button_instagram.style.opacity)>0||!me._button_instagram.style.opacity))?'inherit':'hidden';
+			me._button_phone.ggVisible = !me._button_phone.ggVisible;
+			var flag=me._button_phone.ggVisible;
+			me._button_phone.style[domTransition]='none';
+			me._button_phone.style.visibility=((flag)&&(Number(me._button_phone.style.opacity)>0||!me._button_phone.style.opacity))?'inherit':'hidden';
+			me._button_gmail.ggVisible = !me._button_gmail.ggVisible;
+			var flag=me._button_gmail.ggVisible;
+			me._button_gmail.style[domTransition]='none';
+			me._button_gmail.style.visibility=((flag)&&(Number(me._button_gmail.style.opacity)>0||!me._button_gmail.style.opacity))?'inherit':'hidden';
+			me._button_web.ggVisible = !me._button_web.ggVisible;
+			var flag=me._button_web.ggVisible;
+			me._button_web.style[domTransition]='none';
+			me._button_web.style.visibility=((flag)&&(Number(me._button_web.style.opacity)>0||!me._button_web.style.opacity))?'inherit':'hidden';
 		}
 		me._button_.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
@@ -10971,9 +10733,6 @@ function pano2vrSkin(player,base) {
 				var w=this.offsetWidth;
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 			}
-		}
-		me._button_.ggNodeChange=function () {
-				player.stopSound("7-house_out");
 		}
 		me.divSkin.appendChild(me._button_);
 		el=me._sound_of=document.createElement('div');
@@ -11028,7 +10787,7 @@ function pano2vrSkin(player,base) {
 				me._sound_of.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_of.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_of.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 130;
+					this.ggDx = 145;
 					me._sound_of.style.bottom='26px';
 					me._sound_of.ggUpdatePosition(true);
 				}
@@ -13001,11 +12760,6 @@ function pano2vrSkin(player,base) {
 				player.setVariableValue('pos_360image', player.getVariableValue('pos_360image') % Number("5"));
 			} else {
 			}
-		}
-		if (me.elementMouseOver['button_instagram']) {
-			me._text_.style[domTransition]='none';
-			me._text_.style.visibility=(Number(me._text_.style.opacity)>0||!me._text_.style.opacity)?'inherit':'hidden';
-			me._text_.ggVisible=true;
 		}
 		if (!player.getLockedKeyboard()) {
 			switch(me.skinKeyPressed) {
@@ -18260,7 +18014,6 @@ function pano2vrSkin(player,base) {
 	me._thumbnail_menu.logicBlock_alpha();
 	me._thumbnail_menu_mobile.logicBlock_visible();
 	me._thumbnail_menu_mobile.logicBlock_alpha();
-	me._contact_pop_up.logicBlock_position();
 	me._button_gmail.logicBlock_position();
 	me._button_phone.logicBlock_position();
 	me._button_web.logicBlock_position();
@@ -18321,7 +18074,6 @@ function pano2vrSkin(player,base) {
 	me._phone2.logicBlock_scaling();
 	me._phone3.logicBlock_scaling();
 	me._close.logicBlock_visible();
-	me._contact_pop_up.logicBlock_alpha();
 	me._tt_show_controller.logicBlock_position();
 	me._tt_fullscreen.logicBlock_position();
 	me._tt_enter_vr.logicBlock_position();
@@ -18334,12 +18086,12 @@ function pano2vrSkin(player,base) {
 	me._tt_zoomin.logicBlock_position();
 	me._tt_projection.logicBlock_text();
 	me._enter_vr.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._contact_pop_up.logicBlock_position();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_of.logicBlock_position(); });
+	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_of.logicBlock_position(); });
 	player.addListener('tilesready', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('tilesrequested', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
 	player.addListener('fullscreenexit', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
-	player.addListener('changenode', function(args) { me._show_controller_button.logicBlock_position();me._loading_multires.logicBlock_visible();me._screentint.logicBlock_alpha();me._controller.logicBlock_position();me._controller.logicBlock_alpha();me._controller_slider.logicBlock_position();me._controller_slider.logicBlock_alpha();me._fullscreen_buttons.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._enter_vr.logicBlock_position();me._gyro.logicBlock_position();me._gyro.logicBlock_visible();me._gyro_on.logicBlock_alpha();me._gyro_off.logicBlock_alpha();me._tt_gyro.logicBlock_text();me._projection_buttons.logicBlock_position();me._projection_buttons.logicBlock_visible();me._thumbnail.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_text();me._info.logicBlock_position();me._info.logicBlock_visible();me._autorotate_buttons.logicBlock_position();me._autorotate_buttons.logicBlock_visible();me._autorotate_stop.logicBlock_alpha();me._tt_rotate.logicBlock_text();me._autorotate_start.logicBlock_alpha();me._zoomout.logicBlock_visible();me._zoomin.logicBlock_visible();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_position();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._loading.logicBlock_visible();me._web_page.logicBlock_visible();me._userdata.logicBlock_visible();me._information.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_url.logicBlock_visible();me._popup_video_url.logicBlock_visible();me._video_popup_controls_url.logicBlock_visible();me._video_popup_vimeo.logicBlock_visible();me._popup_video_vimeo.logicBlock_visible();me._video_popup_youtube.logicBlock_visible();me._popup_video_youtube.logicBlock_visible();me.__360image_gyro.logicBlock_visible();me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling();me._close.logicBlock_visible();me._contact_pop_up.logicBlock_alpha(); });
+	player.addListener('changenode', function(args) { me._show_controller_button.logicBlock_position();me._loading_multires.logicBlock_visible();me._screentint.logicBlock_alpha();me._controller.logicBlock_position();me._controller.logicBlock_alpha();me._controller_slider.logicBlock_position();me._controller_slider.logicBlock_alpha();me._fullscreen_buttons.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._enter_vr.logicBlock_position();me._gyro.logicBlock_position();me._gyro.logicBlock_visible();me._gyro_on.logicBlock_alpha();me._gyro_off.logicBlock_alpha();me._tt_gyro.logicBlock_text();me._projection_buttons.logicBlock_position();me._projection_buttons.logicBlock_visible();me._thumbnail.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_text();me._info.logicBlock_position();me._info.logicBlock_visible();me._autorotate_buttons.logicBlock_position();me._autorotate_buttons.logicBlock_visible();me._autorotate_stop.logicBlock_alpha();me._tt_rotate.logicBlock_text();me._autorotate_start.logicBlock_alpha();me._zoomout.logicBlock_visible();me._zoomin.logicBlock_visible();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_position();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._loading.logicBlock_visible();me._web_page.logicBlock_visible();me._userdata.logicBlock_visible();me._information.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_controls_file.logicBlock_visible();me._video_popup_url.logicBlock_visible();me._popup_video_url.logicBlock_visible();me._video_popup_controls_url.logicBlock_visible();me._video_popup_vimeo.logicBlock_visible();me._popup_video_vimeo.logicBlock_visible();me._video_popup_youtube.logicBlock_visible();me._popup_video_youtube.logicBlock_visible();me.__360image_gyro.logicBlock_visible();me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling();me._close.logicBlock_visible(); });
 	player.addListener('configloaded', function(args) { me._tt_show_controller.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._tt_fullscreen.logicBlock_position();me._tt_enter_vr.logicBlock_position();me._gyro.logicBlock_visible();me._tt_gyro.logicBlock_position();me._tt_projection.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_position();me._tt_userdata.logicBlock_position();me._tt_rotate.logicBlock_position();me._tt_zoomout.logicBlock_position();me._tt_zoomin.logicBlock_position();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_visible();me.__360image_gyro.logicBlock_visible(); });
 	player.addListener('projectionchanged', function(args) { me._tt_projection.logicBlock_text(); });
 	player.addListener('autorotatechanged', function(args) { me._autorotate_stop.logicBlock_alpha();me._tt_rotate.logicBlock_text();me._autorotate_start.logicBlock_alpha(); });
@@ -18364,7 +18116,6 @@ function pano2vrSkin(player,base) {
 	player.addListener('varchanged_opt_loader', function(args) { me._loading.logicBlock_visible(); });
 	player.addListener('varchanged_opt_gyro', function(args) { me._gyro.logicBlock_visible();me.__360image_gyro.logicBlock_visible(); });
 	player.addListener('varchanged_vis_360image_once', function(args) { me.__360image_gyro.logicBlock_visible(); });
-	player.addListener('varchanged_show_cotact', function(args) { me._contact_pop_up.logicBlock_alpha(); });
 	player.addListener('varchanged_pos_controller', function(args) { me._controller_slider.logicBlock_position(); });
 	player.addListener('varchanged_pos_360image', function(args) { me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling(); });
 	player.addListener('varchanged_pos_fullscreen', function(args) { me._fullscreen_buttons.logicBlock_position(); });
