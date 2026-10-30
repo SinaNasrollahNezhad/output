@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-30T19:08:44
+// Generated 2026-10-30T19:29:27
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10235,7 +10235,7 @@ function pano2vrSkin(player,base) {
 				me._contact_pop_up.style[domTransition]='left 0s, top 0s, opacity 300ms ease 0ms';
 				if (me._contact_pop_up.ggCurrentLogicStatePosition == 0) {
 					me._contact_pop_up.style.left='206px';
-					me._contact_pop_up.style.top='298px';
+					me._contact_pop_up.style.top='260px';
 				}
 				else {
 					me._contact_pop_up.style.left='203px';
@@ -11028,7 +11028,7 @@ function pano2vrSkin(player,base) {
 				me._sound_of.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._sound_of.style[domTransition]='left 0s, bottom 0s';
 				if (me._sound_of.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 117;
+					this.ggDx = 130;
 					me._sound_of.style.bottom='26px';
 					me._sound_of.ggUpdatePosition(true);
 				}
