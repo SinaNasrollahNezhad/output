@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.14/18105
 // Filename: simplex_test.ggsk
-// Generated 2026-10-30T20:00:15
+// Generated 2026-10-30T20:17:52
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -10622,10 +10622,18 @@ function pano2vrSkin(player,base) {
 		me._button_instagram.onmouseover=function (e) {
 			me._button_instagram__img.style.visibility='hidden';
 			me._button_instagram__imgo.style.visibility='inherit';
+			me.elementMouseOver['button_instagram']=true;
 		}
 		me._button_instagram.onmouseout=function (e) {
+			me._text_.style[domTransition]='none';
+			me._text_.style.visibility='hidden';
+			me._text_.ggVisible=false;
 			me._button_instagram__img.style.visibility='inherit';
 			me._button_instagram__imgo.style.visibility='hidden';
+			me.elementMouseOver['button_instagram']=false;
+		}
+		me._button_instagram.ontouchend=function (e) {
+			me.elementMouseOver['button_instagram']=false;
 		}
 		me._button_instagram.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
@@ -10966,6 +10974,89 @@ function pano2vrSkin(player,base) {
 				player.stopSound("18-balcon");
 		}
 		me.divSkin.appendChild(me._sound_of);
+		el=me._text_=document.createElement('div');
+		els=me._text___text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text \u06f1";
+		el.ggDx=118;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='bottom : 4px;';
+		hs+='height : 21px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='visibility : inherit;';
+		hs+='width : 136px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		hs ='position:absolute;';
+		hs += 'box-sizing: border-box;';
+		hs+='cursor: default;';
+		hs+='left: 0px;';
+		hs+='bottom:  0px;';
+		hs+='width: 138px;';
+		hs+='height: 23px;';
+		hs+='border: 1px solid #000000;';
+		hs+='color: #000000;';
+		hs+='text-align: center;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		els.innerHTML="\u0631\u0627\u0647\u0646\u0645\u0627\u06cc \u0633\u062e\u0646\u06af\u0648";
+		el.appendChild(els);
+		me._text_.ggIsActive=function() {
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			return player.getCurrentNode();
+		}
+		me._text_.logicBlock_position = function() {
+			var newLogicStatePosition;
+			if (
+				((player.getViewerSize().width < 700))
+			)
+			{
+				newLogicStatePosition = 0;
+			}
+			else {
+				newLogicStatePosition = -1;
+			}
+			if (me._text_.ggCurrentLogicStatePosition != newLogicStatePosition) {
+				me._text_.ggCurrentLogicStatePosition = newLogicStatePosition;
+				me._text_.style[domTransition]='left 0s, bottom 0s';
+				if (me._text_.ggCurrentLogicStatePosition == 0) {
+					this.ggDx = 145;
+					me._text_.style.bottom='2px';
+					me._text_.ggUpdatePosition(true);
+				}
+				else {
+					me._text_.ggDx=118;
+					me._text_.style.bottom='4px';
+					me._text_.ggUpdatePosition(true);
+				}
+			}
+		}
+		me._text_.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth + 2;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+			}
+		}
+		me.divSkin.appendChild(me._text_);
 		me._popup_video_file.ggVideoSource = 'media/';
 		me._popup_video_file.ggVideoNotLoaded = true;
 		me._popup_video_url.ggVideoSource = '';
@@ -12760,6 +12851,11 @@ function pano2vrSkin(player,base) {
 				player.setVariableValue('pos_360image', player.getVariableValue('pos_360image') % Number("5"));
 			} else {
 			}
+		}
+		if (me.elementMouseOver['button_instagram']) {
+			me._text_.style[domTransition]='none';
+			me._text_.style.visibility=(Number(me._text_.style.opacity)>0||!me._text_.style.opacity)?'inherit':'hidden';
+			me._text_.ggVisible=true;
 		}
 		if (!player.getLockedKeyboard()) {
 			switch(me.skinKeyPressed) {
@@ -18020,6 +18116,7 @@ function pano2vrSkin(player,base) {
 	me._button_instagram.logicBlock_position();
 	me._button_.logicBlock_position();
 	me._sound_of.logicBlock_position();
+	me._text_.logicBlock_position();
 	me._loading_multires.logicBlock_visible();
 	me._fullscreen.logicBlock_alpha();
 	me._fullscreen_off.logicBlock_alpha();
@@ -18086,7 +18183,7 @@ function pano2vrSkin(player,base) {
 	me._tt_zoomin.logicBlock_position();
 	me._tt_projection.logicBlock_text();
 	me._enter_vr.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_of.logicBlock_position(); });
+	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._button_gmail.logicBlock_position();me._button_phone.logicBlock_position();me._button_web.logicBlock_position();me._button_instagram.logicBlock_position();me._button_.logicBlock_position();me._sound_of.logicBlock_position();me._text_.logicBlock_position(); });
 	player.addListener('tilesready', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('tilesrequested', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
