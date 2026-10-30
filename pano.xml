@@ -1,510 +1,818 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tour start="node1" apprev="18105" appversion="6.1.14">
+<tour appversion="6.1.14" start="node1" apprev="18105">
   <panorama id="node1">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="نمای ساختمان" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node1" comment="" copyright="" longitude="" datetime="" info="" tags="pic_1"/>
+    <userdata title="نمای ساختمان" comment="" datetime="" author="" tags="pic_1" nodeid="node1" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="دامون سپهر پارس بنا" description="" id="Point02" pan="-285.47" tilt="-89.65" target="_blank" skinid="ht_url" url="https://damoonestate.ir/"/>
-      <hotspot title="پارکینگ" description="" id="Point01" pan="-357.52" tilt="-7.58" target="$fwd" skinid="ht_node" url="{node2}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="دامون سپهر پارس بنا" id="Point02" tilt="-89.65" url="https://damoonestate.ir/" skinid="ht_url" description="" pan="-285.47" target="_blank"/>
+      <hotspot title="پارکینگ" id="Point01" tilt="-7.58" url="{node2}" skinid="ht_node" description="" pan="-357.52" target="$fwd"/>
+      <hotspot title="نمای ترکیبی ساختمان" id="Point03" tilt="7.36" url="" skinid="ht_info" description="توضیحات: نمای بیرونی با ترکیب سنگ‌های مرغوب مرمریت و گرانیتِ درجه یکِ برش خورده اجرا شده که علاوه بر زیبایی چشمگیر، در برابر شرایط جوی و تغییرات دما مقاومت بسیار بالایی دارد.&#xa;" pan="-333.07" target=""/>
+      <hotspot title="سیستم حفاظتی و ورودی" id="Point04" tilt="0.76" url="" skinid="ht_info" description="درب ورودی ضد سرقتِ سنگین با قفل دیجیتال هوشمند و پنل آیفون تصویری کارتی سیماران، امنیت کامل و دسترسی آسان را برای ساکنین فراهم کرده است." pan="-5.9" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node2">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="پارکینگ" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node2" comment="" copyright="" longitude="" datetime="" info="" tags="pic_2"/>
+    <userdata title="پارکینگ" comment="" datetime="" author="" tags="pic_2" nodeid="node2" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="قسمت میانی پارکینگ" description="" id="Point01" pan="-8.03" tilt="-10.11" target="$fwd" skinid="ht_node" url="{node3}"/>
-      <hotspot title="نمای ساختمان" description="" id="Point02" pan="-192.46" tilt="-24.01" target="" skinid="ht_node" url="{node1}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="قسمت میانی پارکینگ" id="Point01" tilt="-10.11" url="{node3}" skinid="ht_node" description="" pan="-8.03" target="$fwd"/>
+      <hotspot title="نمای ساختمان" id="Point02" tilt="-24.01" url="{node1}" skinid="ht_node" description="" pan="-192.46" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node3">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="قسمت میانی پارکینگ" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node3" comment="" copyright="" longitude="" datetime="" info="" tags="pic_3"/>
+    <userdata title="قسمت میانی پارکینگ" comment="" datetime="" author="" tags="pic_3" nodeid="node3" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="پارکینگ" description="" id="Point01" pan="-204.7" tilt="-25.18" target="$bwd" skinid="ht_node" url="{node2}"/>
-      <hotspot title="آسانسور تمام اتوماتیک" description="مجهز به کابین استیل ضدخش و سیستم نجات اضطراری" id="Point02" pan="-346.29" tilt="8.54" target="" skinid="ht_info" url=""/>
-      <hotspot title="قسمت سوم پارکینگ" description="" id="Point03" pan="-29.87" tilt="-8.98" target="" skinid="ht_node" url="{node4}"/>
-      <hotspot title="آسانسور" description="" id="Point04" pan="-358.51" tilt="-9.25" target="" skinid="ht_node" url="{node6}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="پارکینگ" id="Point01" tilt="-25.18" url="{node2}" skinid="ht_node" description="" pan="-204.7" target="$bwd"/>
+      <hotspot title="سیستم آسانسور هوشمند " id="Point02" tilt="12.75" url="" skinid="ht_info" description="آسانسور تمام‌اتوماتیکِ کششی با کابین لوکس استیل، ظرفیت ۶ نفره و مجهز به سیستم نجات اضطراری (Blackout) با عملکردی کاملاً بی‌صدا و استاندارد." pan="-347.27" target=""/>
+      <hotspot title="قسمت سوم پارکینگ" id="Point03" tilt="-8.98" url="{node4}" skinid="ht_node" description="" pan="-29.87" target=""/>
+      <hotspot title="آسانسور" id="Point04" tilt="-9.25" url="{node6}" skinid="ht_node" description="" pan="-358.51" target=""/>
+      <hotspot title="درب ضدحریق و پله فرار " id="Point05" tilt="5.82" url="" skinid="ht_info" description="توضیحات: درب ضدحریقِ استاندارد مجهز به آرام‌بند هیدرولیک و دستگیره آنتی‌پانیک، با مقاومت حرارتی ۱۲۰ دقیقه برای حفظ ایمنی کامل ساکنین." pan="-305.09" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node4">
-    <input width="804" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="804" levelbiashidpi="1.000">
-      <level width="804" predecode="0" preload="0" height="804"/>
-      <level width="402" predecode="1" preload="1" height="402"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="804" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="804" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="804" predecode="0" height="804" preload="0"/>
+      <level width="402" predecode="1" height="402" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="قسمت سوم پارکینگ" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node4" comment="" copyright="" longitude="" datetime="" info="" tags="pic_4"/>
+    <userdata title="قسمت سوم پارکینگ" comment="" datetime="" author="" tags="pic_4" nodeid="node4" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="قسمت میانی پارکینگ" description="" id="Point01" pan="-214.82" tilt="-8.09" target="" skinid="ht_node" url="{node3}"/>
-      <hotspot title="قسمت پایانی پارکینگ" description="" id="Point02" pan="-359.06" tilt="-7.86" target="" skinid="ht_node" url="{node5}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="قسمت میانی پارکینگ" id="Point01" tilt="-8.09" url="{node3}" skinid="ht_node" description="" pan="-214.82" target=""/>
+      <hotspot title="قسمت پایانی پارکینگ" id="Point02" tilt="-7.05" url="{node5}" skinid="ht_node" description="" pan="-356.93" target=""/>
+      <hotspot title="دیوارپوش دکوراتیو" id="Point03" tilt="7.53" url="" skinid="ht_info" description="پنل‌های دیواریِ ضد خش و مقاوم در برابر رطوبت، با طرح مدرن تیره که علاوه بر زیبایی بصری، نظافت و نگهداری فضا را بسیار آسان می‌کند." pan="-105.75" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node5">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="قسمت پایانی پارکینگ" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node5" comment="" copyright="" longitude="" datetime="" info="" tags="pic_5"/>
+    <userdata title="قسمت پایانی پارکینگ" comment="" datetime="" author="" tags="pic_5" nodeid="node5" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="قسمت سوم پارکینگ" description="" id="Point01" pan="-344.91" tilt="-7.89" target="" skinid="ht_node" url="{node4}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="قسمت سوم پارکینگ" id="Point01" tilt="-7.89" url="{node4}" skinid="ht_node" description="" pan="-344.91" target=""/>
+      <hotspot title="بخش پایانی پارکینگ" id="Point02" tilt="23.36" url="" skinid="ht_info" description="پوشش دیوارهای انتهای پارکینگ: ترکیبی از سنگ مشکی باران و تراورتن با اجرای دقیق و بندکشی منظم.&#xa;نورپردازی دکوراتیو: چراغ‌های دیواری و نور مخفی سقفی برای ایجاد فضای لوکس و دعوت‌کننده در انتهای محوطه.&#xa;دسترسی‌های اختصاصی: مسیرهای دسترسی ایمن به تاسیسات و خروجی‌های اضطراری طبقات." pan="-228.4" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node6">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="آسانسور" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node6" comment="" copyright="" longitude="" datetime="" info="" tags="pic_6"/>
+    <userdata title="آسانسور" comment="" datetime="" author="" tags="pic_6" nodeid="node6" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="قسمت میانی پارکینگ" description="" id="Point01" pan="-179.05" tilt="-12.04" target="" skinid="ht_node" url="{node3}"/>
-      <hotspot title="نمای واحد" description="" id="Point02" pan="-216.38" tilt="-2.62" target="" skinid="ht_node" url="{node7}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="قسمت میانی پارکینگ" id="Point01" tilt="-12.04" url="{node3}" skinid="ht_node" description="" pan="-179.05" target=""/>
+      <hotspot title="نمای واحد" id="Point02" tilt="-2.62" url="{node7}" skinid="ht_node" description="" pan="-216.38" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node7">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="-4.77" fov="91.35" projection="4" pan="-95.06"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="نمای واحد" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node7" comment="" copyright="" longitude="" datetime="" info="" tags="pic_7"/>
+    <userdata title="نمای واحد" comment="" datetime="" author="" tags="pic_7" nodeid="node7" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="آسانسور" description="" id="Point01" pan="-35.79" tilt="-15.99" target="" skinid="ht_node" url="{node6}"/>
-      <hotspot title="داخل خانه" description="" id="Point02" pan="-116" tilt="-19.59" target="" skinid="ht_node" url="{node8}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="آسانسور" id="Point01" tilt="-15.99" url="{node6}" skinid="ht_node" description="" pan="-35.79" target=""/>
+      <hotspot title="داخل خانه" id="Point02" tilt="-20.36" url="{node8}" skinid="ht_node" description="" pan="-115.32" target=""/>
+      <hotspot title="درب ضدسرقت واحد" id="Point03" tilt="22" url="" skinid="ht_info" description="درب ورودی مدرن با یراق‌آلات ترک و عایق صوتی و حرارتی." pan="-95.85" target=""/>
+      <hotspot title="سیستم اعلام و اطفای حریق" id="Point04" tilt="9.33" url="" skinid="ht_info" description="جعبه آتش‌نشانی استاندارد و دتکتورهای دودی نصب‌شده در راهرو." pan="-167.83" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node8">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="-2.14" fov="76.91" projection="4" pan="76.53"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="داخل خانه" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node8" comment="" copyright="" longitude="" datetime="" info="" tags="pic_8"/>
+    <userdata title="داخل خانه" comment="" datetime="" author="" tags="pic_8" nodeid="node8" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="نمای واحد" description="" id="Point01" pan="-107.02" tilt="-29.53" target="" skinid="ht_node" url="{node7}"/>
-      <hotspot title="آشپزخانه" description="" id="Point02" pan="-271.6" tilt="-22.25" target="" skinid="ht_node" url="{node9}"/>
-      <hotspot title="سالن" description="" id="Point03" pan="-18.41" tilt="-19.9" target="" skinid="ht_node" url="{node10}"/>
-      <hotspot title="راهرو" description="" id="Point04" pan="-180.22" tilt="-16.01" target="" skinid="ht_node" url="{node12}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="نمای واحد" id="Point01" tilt="-29.53" url="{node7}" skinid="ht_node" description="" pan="-107.02" target=""/>
+      <hotspot title="آشپزخانه" id="Point02" tilt="-22.25" url="{node9}" skinid="ht_node" description="" pan="-271.6" target=""/>
+      <hotspot title="سالن" id="Point03" tilt="-19.9" url="{node10}" skinid="ht_node" description="" pan="-18.41" target=""/>
+      <hotspot title="راهرو" id="Point04" tilt="-16.01" url="{node12}" skinid="ht_node" description="" pan="-180.22" target=""/>
+      <hotspot title="آیفون تصویری و پنل هوشمند" id="Point05" tilt="4.55" url="" skinid="ht_info" description="سیستم ارتباطی پیشرفته سیماران با نمایشگر رنگی و قابلیت کنترل دسترسی." pan="-64.61" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node9">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="آشپزخانه" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node9" comment="" copyright="" longitude="" datetime="" info="" tags="pic_9"/>
+    <userdata title="آشپزخانه" comment="" datetime="" author="" tags="pic_9" nodeid="node9" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="داخل خانه" description="" id="Point01" pan="-82.56" tilt="-35.59" target="" skinid="ht_node" url="{node8}"/>
-      <hotspot title="سالن" description="" id="Point02" pan="-48.58" tilt="-15.08" target="" skinid="ht_node" url="{node10}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="داخل خانه" id="Point01" tilt="-35.59" url="{node8}" skinid="ht_node" description="" pan="-82.56" target=""/>
+      <hotspot title="سالن" id="Point02" tilt="-15.08" url="{node10}" skinid="ht_node" description="" pan="-48.58" target=""/>
+      <hotspot title="سینک و شیرآلات" id="Point03" tilt="-12.51" url="" skinid="ht_info" description="سینک ظرفشویی دوقلویگرانیتی/استیل ضدزنگ عمیق به همراه شیرآلات اهرمی لوکس." pan="-270.62" target=""/>
+      <hotspot title="کابینت‌های نئوکلاسیک" id="Point04" tilt="19.69" url="" skinid="ht_info" description=" کابینت‌های تمام‌چوب یا MDF با پوشش پلی‌اورتان سفید، طراحی کلاسیک-مدرن و فضای ذخیره‌سازی بسیار وسیع." pan="-267.13" target=""/>
+      <hotspot title="هود و گاز توکار" id="Point05" tilt="-4.34" url="" skinid="ht_info" description="تجهیزات توکار درجه یک با پنل لمسی و مکش قوی در هماهنگی کامل با دکوراسیون آشپزخانه" pan="-179.29" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node10">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="-6.98" fov="91.53" projection="4" pan="70.42"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="سالن" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node10" comment="" copyright="" longitude="" datetime="" info="" tags="pic_10"/>
+    <userdata title="سالن" comment="" datetime="" author="" tags="pic_10" nodeid="node10" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="داخل خانه" description="" id="Point01" pan="-130.32" tilt="-19.97" target="" skinid="ht_node" url="{node8}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="داخل خانه" id="Point01" tilt="-19.97" url="{node8}" skinid="ht_node" description="" pan="-130.32" target=""/>
+      <hotspot title="پنجره‌های قدی دوجداره" id="Point02" tilt="4.38" url="" skinid="ht_info" description="پنجره‌های بزرگ با پروفیل استاندارد و عایق حرارت و صوت، تأمین‌کننده نور عالی فضای داخلی" pan="-270.78" target=""/>
+      <hotspot title="سیستم گرمایشی" id="Point03" tilt="-10.91" url="" skinid="ht_info" description="رادیاتورهای پنلی مدرن با بازدهی حرارتی بالا و طراحی هماهنگ با دکوراسیون داخلی." pan="-213.03" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node12">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="راهرو" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node12" comment="" copyright="" longitude="" datetime="" info="" tags="pic_11"/>
+    <userdata title="راهرو" comment="" datetime="" author="" tags="pic_11" nodeid="node12" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="داخل خانه" description="" id="Point01" pan="-126.5" tilt="-15.58" target="" skinid="ht_node" url="{node8}"/>
-      <hotspot title="سرویس بهداشتی" description="" id="Point02" pan="-97.38" tilt="-14.82" target="" skinid="ht_node" url="{node11}"/>
-      <hotspot title="حمام" description="" id="Point03" pan="-31.94" tilt="-8.3" target="" skinid="ht_node" url="{node13}"/>
-      <hotspot title="اتاق مستر" description="" id="Point04" pan="-3.03" tilt="-12.58" target="" skinid="ht_node" url="{node14}"/>
-      <hotspot title="اتاق دوم" description="" id="Point05" pan="-303.24" tilt="-13.21" target="" skinid="ht_node" url="{node16}"/>
-      <hotspot title="اتاق سوم" description="" id="Point06" pan="-236.19" tilt="-10.95" target="" skinid="ht_node" url="{node17}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="داخل خانه" id="Point01" tilt="-15.58" url="{node8}" skinid="ht_node" description="" pan="-126.5" target=""/>
+      <hotspot title="سرویس بهداشتی" id="Point02" tilt="-14.82" url="{node11}" skinid="ht_node" description="" pan="-97.38" target=""/>
+      <hotspot title="حمام" id="Point03" tilt="-8.3" url="{node13}" skinid="ht_node" description="" pan="-31.94" target=""/>
+      <hotspot title="اتاق مستر" id="Point04" tilt="-12.58" url="{node14}" skinid="ht_node" description="" pan="-3.03" target=""/>
+      <hotspot title="اتاق دوم" id="Point05" tilt="-13.21" url="{node16}" skinid="ht_node" description="" pan="-303.24" target=""/>
+      <hotspot title="اتاق سوم" id="Point06" tilt="-10.95" url="{node17}" skinid="ht_node" description="" pan="-236.19" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node11">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="سرویس بهداشتی" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node11" comment="" copyright="" longitude="" datetime="" info="" tags="pic_12"/>
+    <userdata title="سرویس بهداشتی" comment="" datetime="" author="" tags="pic_12" nodeid="node11" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="راهرو" description="" id="Point01" pan="-191.82" tilt="-12.66" target="" skinid="ht_node" url="{node12}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="راهرو" id="Point01" tilt="-12.66" url="{node12}" skinid="ht_node" description="" pan="-191.82" target=""/>
+      <hotspot title="کاشی و سرامیک پرسلان" id="Point02" tilt="-0.54" url="" skinid="ht_info" description="کاشی‌های دیواری و کفی ضد خش و مقاوم در برابر رطوبت با طرح مدرن طوسی و مرمرین." pan="-100.41" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node13">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="حمام" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node13" comment="" copyright="" longitude="" datetime="" info="" tags="pic_13"/>
+    <userdata title="حمام" comment="" datetime="" author="" tags="pic_13" nodeid="node13" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="راهرو" description="" id="Point01" pan="-175.75" tilt="-26.13" target="" skinid="ht_node" url="{node12}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="راهرو" id="Point01" tilt="-26.13" url="{node12}" skinid="ht_node" description="" pan="-175.75" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node14">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="-5.81" fov="64.79" projection="4" pan="-60.05"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="اتاق مستر" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node14" comment="" copyright="" longitude="" datetime="" info="" tags="pic_14"/>
+    <userdata title="اتاق مستر" comment="" datetime="" author="" tags="pic_14" nodeid="node14" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="راهرو" description="" id="Point01" pan="-84.84" tilt="-8.22" target="" skinid="ht_node" url="{node12}"/>
-      <hotspot title="حمام اتاق" description="" id="Point02" pan="-29.47" tilt="-7.52" target="" skinid="ht_node" url="{node15}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="راهرو" id="Point01" tilt="-8.22" url="{node12}" skinid="ht_node" description="" pan="-84.84" target=""/>
+      <hotspot title="حمام اتاق" id="Point02" tilt="-7.52" url="{node15}" skinid="ht_node" description="" pan="-29.47" target=""/>
+      <hotspot title="کمد دیواری اختصاصی" id="Point03" tilt="9.54" url="" skinid="ht_info" description="کمد دیواری عمیق و کاربردی با کشوهای جادار و دستگیره‌های مشکی برای نگهداری لباس و وسایل." pan="-52.75" target=""/>
+      <hotspot title="پنجره‌های دوجداره قدی" id="Point04" tilt="15.05" url="" skinid="ht_info" description="تامین‌کننده نور طبیعی فراوان با چشم‌اندازی روشن و دلباز به بیرون." pan="-254.72" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node15">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="حمام اتاق" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node15" comment="" copyright="" longitude="" datetime="" info="" tags="pic_15"/>
+    <userdata title="حمام اتاق" comment="" datetime="" author="" tags="pic_15" nodeid="node15" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="اتاق مستر" description="" id="Point01" pan="-176.55" tilt="-17.8" target="" skinid="ht_node" url="{node14}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="اتاق مستر" id="Point01" tilt="-17.8" url="{node14}" skinid="ht_node" description="" pan="-176.55" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node16">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="اتاق دوم" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node16" comment="" copyright="" longitude="" datetime="" info="" tags="pic_16"/>
+    <userdata title="اتاق دوم" comment="" datetime="" author="" tags="pic_16" nodeid="node16" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="راهرو" description="" id="Point01" pan="-166.25" tilt="-11.54" target="" skinid="ht_node" url="{node12}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="راهرو" id="Point01" tilt="-11.54" url="{node12}" skinid="ht_node" description="" pan="-166.25" target=""/>
+      <hotspot title="پنجره دوجداره عایق صدا و حرارت" id="Point02" tilt="4.14" url="" skinid="ht_info" description="&#xa;توضیحات: پروفیل دوجداره مرغوب با قابلیت بازشو دوحالته، تامین‌کننده نور طبیعی فراوان و عایق کامل در برابر اتلاف انرژی." pan="-0.88" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node17">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="اتاق سوم" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node17" comment="" copyright="" longitude="" datetime="" info="" tags="pic_17"/>
+    <userdata title="اتاق سوم" comment="" datetime="" author="" tags="pic_17" nodeid="node17" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="راهرو" description="" id="Point01" pan="-111.92" tilt="-9.63" target="" skinid="ht_node" url="{node12}"/>
-      <hotspot title="بالکن" description="" id="Point02" pan="-24.02" tilt="-12.02" target="" skinid="ht_node" url="{node18}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="راهرو" id="Point01" tilt="-9.63" url="{node12}" skinid="ht_node" description="" pan="-111.92" target=""/>
+      <hotspot title="بالکن" id="Point02" tilt="-12.02" url="{node18}" skinid="ht_node" description="" pan="-24.02" target=""/>
+      <hotspot title="کمد دیواری" id="Point03" tilt="13.74" url="" skinid="ht_info" description="کمد سرتاسری با فضای نگهداری مناسب برای لباس‌ها و وسایل شخصی." pan="-332.95" target=""/>
+      <hotspot title="درب و پنجره دو جداره UPVC" id="Point04" tilt="15.67" url="" skinid="ht_info" description="توضیح: اتصال اتاق به بالکن با درب شیشه‌ای مقاوم و عایق‌بندی استاندارد جهت جلوگیری از اتلاف انرژی و ورود صدا (وین‌تک / هافمن)." pan="-19.68" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <panorama id="node18">
-    <input width="1024" overlap="1" levelbias="0.400" levelingroll="0" levelingpitch="0" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="1024" levelbiashidpi="1.000">
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
-      <preview strip="1" color="0x808080"/>
+    <input width="1024" levelingroll="0" levelingpitch="0" levelbias="0.400" overlap="1" height="1024" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="1024" predecode="0" height="1024" preload="0"/>
+      <level width="512" predecode="0" height="512" preload="0"/>
+      <level width="256" predecode="1" height="256" preload="1"/>
+      <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start pan="0" tilt="0" projection="4" fov="70"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" scaletofit="1" fovstereographic="270" fov="120"/>
+      <start tilt="0" fov="70" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" fov="120" scaletofit="1" fovstereographic="270" pan="360" fovfisheye="360"/>
     </view>
-    <userdata title="بالکن" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="node18" comment="" copyright="" longitude="" datetime="" info="" tags="pic_18"/>
+    <userdata title="بالکن" comment="" datetime="" author="" tags="pic_18" nodeid="node18" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
-      <label borderradius="1" width="180" backgroundcolor="0xffffff" backgroundalpha="1" border="1" background="1" bordercolor="0x000000" enabled="1" borderalpha="1" wordwrap="1" textcolor="0x000000" textalpha="1" height="20"/>
-      <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" bordercolor="0x0000ff" borderalpha="1"/>
-      <hotspot title="اتاق سوم" description="" id="Point01" pan="-203.38" tilt="-17.31" target="" skinid="ht_node" url="{node17}"/>
+      <label width="180" background="1" wordwrap="1" enabled="1" backgroundcolor="0xffffff" borderalpha="1" height="20" border="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" backgroundalpha="1" borderradius="1"/>
+      <polystyle mode="0" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
+      <hotspot title="اتاق سوم" id="Point01" tilt="-17.31" url="{node17}" skinid="ht_node" description="" pan="-203.38" target=""/>
+      <hotspot title="پکیج دیواری و تاسیسات گرمایشی" id="Point02" tilt="17.79" url="" skinid="ht_info" description="توضیح: سیستم تامین گرمایش و آب گرم مصرفی مستقل واحد (برند معتبر نظیر ایران رادیاتور / بوتان)، همراه با انشعابات کامل گاز، لوله‌کشی و تخلیه در فضای تراس." pan="-78.61" target=""/>
     </hotspots>
     <media>
-      <sound level="1.000" mode="0" keep="1" id="project_test" loop="-1" url="media/skin_snd_project_test.mp3"/>
-      <sound level="1.000" mode="0" keep="1" id="ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4" loop="-1" url="media/skin_snd_ElevenLabs_2026-10-28T03_30_16_Roger - Laid-Back, Casual, Resonant_pre_sp100_s50_sb75_v4.mp3"/>
+      <sound id="1-start" url="media/skin_snd_1-start.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="2-parking" url="media/skin_snd_2-parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="3-middle_parking" url="media/skin_snd_3-middle_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="4-third_part_parking" url="media/skin_snd_4-third_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="5-last_part_parking" url="media/skin_snd_5-last_part_parking.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="6-elevator" url="media/skin_snd_6-elevator.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="7-house_out" url="media/skin_snd_7-house_out.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="8_inside_house" url="media/skin_snd_8_inside_house.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="9_kitchen" url="media/skin_snd_9_kitchen.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="10_salon" url="media/skin_snd_10_salon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="11-rahroo" url="media/skin_snd_11-rahroo.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="12-toilet" url="media/skin_snd_12-toilet.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="13-bath" url="media/skin_snd_13-bath.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="14-master_room" url="media/skin_snd_14-master_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="15-master" url="media/skin_snd_15-master.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="16-second_room" url="media/skin_snd_16-second_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="17-third_room" url="media/skin_snd_17-third_room.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
+      <sound id="18-balcon" url="media/skin_snd_18-balcon.mp3" mode="0" level="1.000" loop="-1" keep="1"/>
     </media>
-    <transition blendcolor="0x000000" zoomafteroutfov="20" zoomafterinfov="90" zoomin="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomoutpause="1" enabled="1" zoomout="0" blendtime="1" zoomfov="20"/>
-    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
-    <control lockedwheel="0" simulatemass="1" contextvr="1" invertwheel="0" speedwheel="1" sensitivity="8" rubberband="0" lockedmouse="0" contextfullscreen="1" lockedkeyboard="0" contextprojections="0" invertcontrol="1" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+    <transition zoomout="0" type="crossdissolve" zoomafteroutfov="20" softedge="0" enabled="1" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control rubberband="0" sensitivity="8" contextprojections="0" lockedwheel="0" lockedkeyboardzoom="0" contextvr="1" simulatemass="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedkeyboard="0" invertcontrol="1" invertwheel="0" lockedmouse="0" contextfullscreen="1"/>
   </panorama>
   <masternode>
-    <userdata title="" latitude="" source="" customnodeid="" description="" heading="0" author="" nodeid="master" comment="" copyright="" longitude="" datetime="" info="" tags=""/>
+    <userdata title="" comment="" datetime="" author="" tags="" nodeid="master" description="" heading="0" customnodeid="" copyright="" info="" longitude="" source="" latitude=""/>
   </masternode>
 </tour>
